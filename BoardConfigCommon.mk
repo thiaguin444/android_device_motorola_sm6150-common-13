@@ -217,8 +217,8 @@ endif
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# Security patch level
-VENDOR_SECURITY_PATCH := 2022-05-01
+# Security Patch Level
+VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # SELinux
 TARGET_SEPOLICY_DIR := msmsteppe
