@@ -14,11 +14,11 @@
 # limitations under the License.
 #
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/motorola/sm6150-common/sm6150-common-vendor.mk)
+
+# Flatten APEXs for performance
+OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -58,6 +58,10 @@ endif
 
 # Properties
 -include $(LOCAL_PATH)/properties.mk
+
+# Disable async MTE on system_server
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    arm64.memtag.process.system_server=off
 
 # Permissions
 PRODUCT_COPY_FILES += \
