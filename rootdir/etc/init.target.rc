@@ -357,6 +357,11 @@ on property:init.svc.hwcomposer-2-1=running
 on property:init.svc.hwcomposer-2-1=restarting
     stop ppd
 
+
+on property:sys.boot_completed=1
+    # STOP EATING MY BATTERY AFTER 100H OF UPTIME FUCK YOU
+    stop statsd
+
 #service nqs /system/bin/nqs
 #    class late_start
 #    socket nqs_qsb_comm stream 660 system system
