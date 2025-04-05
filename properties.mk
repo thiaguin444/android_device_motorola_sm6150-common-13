@@ -311,6 +311,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.has_wide_color_display=true \
     ro.surface_flinger.has_HDR_display=true \
+    ro.surface_flinger.clear_slots_with_set_layer_buffer=true \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.wcg_composition_dataspace=143261696 \
     ro.surface_flinger.protected_contents=true \
@@ -323,7 +324,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.early.sf.duration=21000000 \
     debug.sf.early.app.duration=16500000 \
     debug.sf.earlyGl.sf.duration=13500000 \
-    debug.sf.earlyGl.app.duration=21000000
+    debug.sf.earlyGl.app.duration=21000000 \
+    debug.sf.predict_hwc_composition_strategy=0 \
+    debug.sf.enable_transaction_tracing=false \
+    service.sf.prime_shader_cache=0
 
 # Sensor
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
