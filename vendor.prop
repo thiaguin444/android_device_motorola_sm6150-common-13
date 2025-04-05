@@ -12,3 +12,6 @@ ro.config.avoid_gfx_accel=true
 
 # fdsan
 debug.fdsan=0
+
+# traced
+persist.traced.enable=0
