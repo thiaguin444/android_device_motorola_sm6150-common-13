@@ -252,8 +252,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.vendor.perf-hal.ver=2.2 \
-    ro.vendor.perf.scroll_opt=true
+    ro.vendor.perf-hal.ver=2.2
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.qti.sys.fw.bg_apps_limit=20
@@ -326,7 +325,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     debug.sf.early.app.duration=16500000 \
     debug.sf.earlyGl.sf.duration=13500000 \
     debug.sf.earlyGl.app.duration=21000000 \
-    debug.sf.predict_hwc_composition_strategy=0 \
     debug.sf.enable_transaction_tracing=false \
     service.sf.prime_shader_cache=0
 
